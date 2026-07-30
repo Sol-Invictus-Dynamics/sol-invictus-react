@@ -1,0 +1,35 @@
+:root {
+  --sol-gold: #ffca2f;
+  --deep-navy: #004987;
+  --maroon: #8b1526;
+  --charcoal: #1f2128;
+  --white: #ffffff;
+  --mid: #4b4f58;
+  --light: #ffffff;
+}
+        
+        .sponsor-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--white);
+        }
+        .sponsor-content {
+            text-align: center;
+        }
+        .sponsor-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            margin-bottom: 1rem;
+        }
+        .sponsor-subheading {
+            font-size: 1.2rem;
+            color: var(--mid);
+        }  
+
+h1, h2{
+    text-align: center;
+    color: var(--charcoal);
+}
