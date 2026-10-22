@@ -1,6 +1,7 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Team from "./pages/Team.jsx";
+import Alumni from "./pages/Alumni.jsx";
 import Mentors from "./pages/Mentors.jsx";
 import Sponsors from "./pages/Sponsors.jsx";
 import Blog from "./pages/Blog.jsx";
@@ -14,6 +15,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/alumni" element={<Alumni />} />
         <Route path="/mentors" element={<Mentors />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/blog" element={<Blog />} />

@@ -1,10 +1,12 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Nav from "../components/Nav.jsx";
 import { usePageStyles, usePageTitle } from "../hooks/usePageStyles.js";
 import { asset } from "../lib/asset.js";
 import { teamSections, teamMentorSections } from "../data/teamData.js";
 import stylesCss from "../styles/styles.css?raw";
 import teamCss from "../styles/team.css?raw";
+import alumniBannerCss from "../styles/team.css?raw";
 
 // function UniSection({ section }) {
 //   return (
@@ -68,7 +70,7 @@ import teamCss from "../styles/team.css?raw";
 // }
 
 export default function Team() {
-  usePageStyles("team", [stylesCss, teamCss]);
+  usePageStyles("team", [stylesCss, teamCss, alumniBannerCss]);
   usePageTitle("Team — SOL-Invictus | Sasol Solar Car Challenge");
 
   useEffect(() => {
@@ -86,6 +88,18 @@ export default function Team() {
           <h2 className="team-subheading">Stay tuned for updates.</h2>
         </div>
       </div>
+      <Link
+        to="/alumni"
+        className="alumni-banner"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url("${asset("pictures/alumni-picture.jpg")}")`,
+        }}
+      >
+        <span className="alumni-banner-content">
+          <span className="alumni-banner-title">Meet our <span className="accent">Alumni</span></span>
+          {/* <span className="alumni-banner-cta">Discover their stories</span> */}
+        </span>
+      </Link>
     </>
   );
 }
